@@ -1,0 +1,622 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>启动流程 · Thinking in iOS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cloud 632476744@qq.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="compile.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层原理</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="compile.html">
+            
+                <a href="compile.html">
+            
+                    
+                    编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="lauch.html">
+            
+                <a href="lauch.html">
+            
+                    
+                    启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    runtime
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    对象的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="category.html">
+            
+                <a href="category.html">
+            
+                    
+                    分类及关联对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="kvc.html">
+            
+                <a href="kvc.html">
+            
+                    
+                    KVC&KVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    消息机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="runloop.html">
+            
+                <a href="runloop.html">
+            
+                    
+                    runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="block.html">
+            
+                <a href="block.html">
+            
+                    
+                    block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="memory.html">
+            
+                <a href="memory.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="thread.html">
+            
+                <a href="thread.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="network.html">
+            
+                <a href="network.html">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">系统架构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    hybrid
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../hybrid/webview.html">
+            
+                <a href="../hybrid/webview.html">
+            
+                    
+                    WebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    MVVM
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    组件化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">UI视图</li>
+        
+        
+    
+
+    
+        
+        <li class="header">第三方库</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    Texture
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    YYKit
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高性能</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    启动速度、体积优化、崩溃监控、卡顿监控、性能监控、电量问题
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">音视频</li>
+        
+        
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../面试题/interview.html">
+            
+                <a href="../面试题/interview.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >启动流程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>App&#x7684;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;2&#x4E2A;&#x9636;&#x6BB5;:
+&#x7B2C;&#x4E00;&#x9636;&#x6BB5;:premain,&#x6307;&#x70B9;&#x51FB;app&#x5230;&#x6267;&#x884C;main&#x51FD;&#x6570;&#x4E4B;&#x524D;&#x3002;
+&#x7B2C;&#x4E8C;&#x9636;&#x6BB5;:main,&#x6307;main&#x51FD;&#x6570;&#x6267;&#x884C;&#x540E;&#x5230;AppDelegate&#x4E2D;didFinishLauchingWithOptions&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x3002;</p>
+<h2 id="premain">premain</h2>
+<p>App&#x542F;&#x52A8;&#x65F6;,&#x7CFB;&#x7EDF;&#x5148;&#x52A0;&#x8F7D;App&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;(mach-o),&#x4ECE;&#x91CC;&#x9762;&#x83B7;&#x5F97;dyld(&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5668;)&#x7684;&#x8DEF;&#x5F84;,&#x7136;&#x540E;&#x9012;&#x5F52;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;,&#x521D;&#x59CB;&#x5316;runtime&#x3002;&#x5F53;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x5E93;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;,runtime&#x4F1A;&#x5BF9;&#x9879;&#x76EE;&#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x8FDB;&#x884C;&#x7C7B;&#x7ED3;&#x6784;&#x521D;&#x59CB;&#x5316;,&#x7136;&#x540E;&#x8C03;&#x7528;&#x6240;&#x6709;&#x7684;load&#x65B9;&#x6CD5;&#x3002;&#x6700;&#x540E;dyld&#x8FD4;&#x56DE;main&#x51FD;&#x6570;&#x5730;&#x5740;&#xFF0C;main&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x52A0;&#x8F7D;&#x6B65;&#x9AA4;&#x6709;&#x5982;&#x4E0B;4&#x6B65;:</p>
+<ol>
+<li>load dylibs image &#x8BFB;&#x53D6;&#x5E93;&#x955C;&#x50CF;&#x6587;&#x4EF6;</li>
+<li>rebase/bind image</li>
+<li>objc setup</li>
+<li>initializer</li>
+</ol>
+<p>&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x8017;&#x65F6;&#x90FD;&#x53EF;&#x4EE5;&#x5728;Xcode&#x4E2D;&#x8C03;&#x8BD5;&#x3002;&#x5177;&#x4F53;&#x914D;&#x7F6E;&#x4E3A;&#x5728;Xcode&#x7684;&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x62E9;Project&#x2192;Scheme&#x2192;Edit Scheme...&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230; Run &#x2192; Environment Variables &#x2192;+&#xFF0C;&#x6DFB;&#x52A0;name&#x4E3A;DYLD_PRINT_STATISTICS &#x503C;&#x4E3A;1&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x914D;&#x7F6E;&#x540E;&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x6253;&#x5370;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x7ED3;&#x679C;:</p>
+<pre class="language-"><code>Total pre-main time: 980.77 milliseconds (100.0%)
+         dylib loading time: 483.30 milliseconds (49.2%)
+        rebase/binding time: 100.17 milliseconds (10.2%)
+            ObjC setup time: 121.90 milliseconds (12.4%)
+           initializer time: 275.18 milliseconds (28.0%)
+           slowest intializers :
+             libSystem.B.dylib :   7.67 milliseconds (0.7%)
+          libglInterpose.dylib : 140.93 milliseconds (14.3%)
+         libMTLInterpose.dylib :  58.22 milliseconds (5.9%)
+                            ai :  31.20 milliseconds (3.1%)
+</code></pre><h3 id="load-dylibs-image">load dylibs image</h3>
+<p>&#x8FD9;&#x4E00;&#x9636;&#x6BB5;dyld&#x4F1A;&#x5206;&#x6790;&#x5E94;&#x7528;&#x4F9D;&#x8D56;&#x7684;dylib,&#x627E;&#x5230;&#x5176;mach-o&#x6587;&#x4EF6;,&#x6253;&#x5361;&#x548C;&#x8BFB;&#x53D6;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5E76;&#x9A8C;&#x8BC1;&#x6709;&#x6548;&#x6027;,&#x63A5;&#x7740;&#x4F1A;&#x627E;&#x5230;&#x4EE3;&#x7801;&#x7B7E;&#x540D;&#x6CE8;&#x518C;&#x5230;&#x5185;&#x6838;,&#x6700;&#x540E;dylib&#x7684;&#x6BCF;&#x4E2A;segment&#x8C03;&#x7528;mmap()&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;app&#x9700;&#x8981;&#x52A0;&#x8F7D;100&#x5230;400&#x4E2A;dylibs,&#x4F46;&#x5176;&#x4E2D;&#x7684;&#x7CFB;&#x7EDF;&#x5E93;&#x88AB;&#x4F18;&#x5316;,&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x7684;&#x52A0;&#x8F7D;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x4E00;&#x6B65;&#x9AA4;&#x7684;&#x4F18;&#x5316;&#x6709;:</p>
+<ol>
+<li>&#x51CF;&#x5C11;&#x975E;&#x7CFB;&#x7EDF;&#x5E93;&#x7684;&#x4F9D;&#x8D56;</li>
+<li>&#x5408;&#x5E76;&#x975E;&#x7CFB;&#x7EDF;&#x5E93;,&#x82F9;&#x679C;&#x652F;&#x6301;6&#x4E2A;&#x975E;&#x7CFB;&#x7EDF;&#x5E93;&#x5408;&#x5E76;&#x4E3A;1&#x4E2A;</li>
+</ol>
+<h3 id="rebasebind-image">rebase/bind image</h3>
+<p>&#x7531;&#x4E8E;ASLR&#x7684;&#x5B58;&#x5728;,&#x9700;&#x8981;&#x5728;&#x8FD9;&#x4E00;&#x6B65;&#x4FEE;&#x6B63;&#x5730;&#x5740;&#x504F;&#x5DEE;&#x3002;rebase&#x5C06;&#x955C;&#x50CF;&#x8BFB;&#x5165;&#x5185;&#x5B58;,&#x4FEE;&#x6B63;&#x955C;&#x50CF;&#x5185;&#x90E8;&#x7684;&#x6307;&#x9488;;bind
+&#x67E5;&#x8BE2;&#x7B26;&#x53F7;&#x8868;,&#x8BBE;&#x7F6E;&#x6307;&#x5411;&#x955C;&#x50CF;&#x5916;&#x90E8;&#x7684;&#x6307;&#x9488;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x4E00;&#x6B65;&#x9AA4;&#x7684;&#x4F18;&#x5316;&#x6709;:</p>
+<ol>
+<li>&#x51CF;&#x5C11;objc&#x7C7B;&#x6570;&#x91CF;,&#x51CF;&#x5C11;selector&#x6570;&#x91CF;(&#x6574;&#x7406;&#x5220;&#x9664;&#x65E0;&#x7528;&#x4EE3;&#x7801;)</li>
+</ol>
+<h3 id="objc-setup">objc setup</h3>
+<p>&#x8FD9;&#x4E00;&#x6B65;&#x4F1A;&#x8FDB;&#x884C;Objc &#x8FD0;&#x884C;&#x65F6;&#x7684;&#x521D;&#x59CB;&#x5904;&#x7406;&#xFF0C;&#x5305;&#x62EC;&#x6CE8;&#x518C;&#x6240;&#x6709;&#x58F0;&#x660E;&#x8FC7;&#x7684;objc&#x7C7B;,&#x5C06;&#x5206;&#x7C7B;&#x63D2;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#x91CC;,&#x68C0;&#x67E5;&#x6BCF;&#x4E2A;selector&#x7684;&#x552F;&#x4E00;&#x6027;&#x3002;</p>
+<h3 id="initializer">initializer</h3>
+<p>&#x8FD9;&#x4E00;&#x6B65;dyld&#x4F1A;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;,&#x8C03;&#x7528;&#x6BCF;&#x4E2A;objc&#x7C7B;&#x548C;&#x5206;&#x7C7B;&#x7684;+load&#x65B9;&#x6CD5;,&#x8C03;&#x7528;c/c++&#x4E2D;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x521B;&#x5EFA;&#x975E;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x9759;&#x6001;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;&#x8BE5;&#x9636;&#x6BB5;&#x6267;&#x884C;&#x5B8C;&#x540E;,dyld&#x5F00;&#x59CB;&#x8C03;&#x52A8;main()&#x51FD;&#x6570;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x4E00;&#x6B65;&#x9AA4;&#x7684;&#x4F18;&#x5316;&#x6709;:</p>
+<ol>
+<li>&#x5C11;&#x5728;&#x7C7B;&#x7684;+load&#x65B9;&#x6CD5;&#x91CC;&#x505A;&#x4E8B;&#x60C5;,&#x5C3D;&#x91CF;&#x628A;&#x8FD9;&#x4E9B;&#x4E8B;&#x60C5;&#x63A8;&#x8FDF;&#x5230;+initiailize.</li>
+</ol>
+<h2 id="didfinishlaunchingwithoptions">didFinishLaunchingWithOptions</h2>
+<p>&#x5728;main()&#x88AB;&#x8C03;&#x7528;&#x540E;&#x5230;didFinishLaunchingWithOptions&#x7ED3;&#x675F;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;,&#x4E3B;&#x8981;&#x662F;&#x6267;&#x884C;&#x542F;&#x52A8;&#x9879;&#x4EFB;&#x52A1;&#x548C;&#x5B8C;&#x6210;&#x9996;&#x5C4F;&#x6E32;&#x67D3;&#x3002;</p>
+<p>&#x542F;&#x52A8;&#x9879;&#x5305;&#x62EC;SDK&#x521D;&#x59CB;&#x5316;&#x3001;&#x7EDF;&#x8BA1;&#x4E0A;&#x62A5;&#x3001;&#x7F51;&#x7EDC;&#x521D;&#x59CB;&#x5316;&#x7B49;&#x7B49;,&#x5982;&#x679C;&#x4E0D;&#x52A0;&#x533A;&#x5206;&#x7684;&#x4E00;&#x80A1;&#x8111;&#x5806;&#x5728;didFinishLaunchingWithOptions&#x91CC;,&#x4F1A;&#x6781;&#x5927;&#x5F71;&#x54CD;&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x3002;&#x8FD9;&#x4E00;&#x9636;&#x6BB5;&#x53EF;&#x4EE5;&#x5C06;&#x542F;&#x52A8;&#x9879;&#x6839;&#x636E;&#x6240;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x5206;&#x7C7B;,&#x6709;&#x4E9B;&#x542F;&#x52A8;&#x9879;&#x662F;&#x9700;&#x8981;&#x521A;&#x542F;&#x52A8;&#x5C31;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;,&#x5982;Crash&#x76D1;&#x63A7;&#x3001;&#x7EDF;&#x8BA1;&#x4E0A;&#x62A5;&#x7B49;,&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x7684;&#x7F3A;&#x5931;;&#x6709;&#x4E9B;&#x542F;&#x52A8;&#x9879;&#x9700;&#x8981;&#x5728;&#x8F83;&#x65E9;&#x7684;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x5B8C;&#x6210;,&#x5982;&#x7F51;&#x7EDC;&#x521D;&#x59CB;&#x5316;;&#x6709;&#x4E9B;&#x53EF;&#x4EE5;&#x88AB;&#x5EF6;&#x8FDF;&#x6267;&#x884C;,&#x5982;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;,&#x652F;&#x4ED8;SDK&#x3001;&#x5730;&#x56FE;SDK&#x7B49;&#x3002;&#x5C06;&#x542F;&#x52A8;&#x9879;&#x5408;&#x7406;&#x5212;&#x5206;&#x540E;,&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x653E;&#x5165;&#x9996;&#x9875;&#x6784;&#x5EFA;&#x524D;&#x3001;&#x9996;&#x9875;&#x6784;&#x5EFA;&#x540E;&#x3001;&#x9996;&#x9875;&#x6E32;&#x67D3;&#x5B8C;&#x6210;&#x7B49;&#x542F;&#x52A8;&#x9636;&#x6BB5;&#xFF0C;&#x4F18;&#x5316;&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x6B64;&#x5916;,&#x4F7F;&#x7528;&#x7EAF;&#x4EE3;&#x7801;&#x65B9;&#x5F0F;&#x800C;&#x4E0D;&#x662F;storyboard&#x52A0;&#x8F7D;&#x9996;&#x9875;UI&#x7684;&#x65B9;&#x5F0F;,&#x53EF;&#x4EE5;&#x52A0;&#x5FEB;&#x9996;&#x5C4F;&#x6E32;&#x67D3;&#x3002;</p>
+<p>&#x603B;&#x7ED3;:&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x4F18;&#x5316;,&#x65E0;&#x975E;&#x662F;&#x8BA9;&#x7CFB;&#x7EDF;&#x5728;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x5C11;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x3002;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x5F97;&#x5148;&#x6E05;&#x695A;&#x5DE5;&#x7A0B;&#x91CC;&#x505A;&#x7684;&#x54EA;&#x4E9B;&#x4E8B;&#x662F;&#x5728;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x505A;&#x7684;&#x3001;&#x5BF9;&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5F71;&#x54CD;&#x6709;&#x591A;&#x5927;&#xFF0C;&#x7136;&#x540E;case by case&#x5730;&#x5206;&#x6790;&#x5DE5;&#x7A0B;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x653E;&#x5230;&#x5B50;&#x7EBF;&#x7A0B;&#x3001;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x7B49;&#x65B9;&#x5F0F;&#x8BA9;&#x7CFB;&#x7EDF;&#x5728;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x66F4;&#x8F7B;&#x677E;&#x4E9B;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="compile.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 编译流程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"启动流程","level":"2.2","depth":1,"next":{"title":"runtime","level":"2.3","depth":1,"ref":"","articles":[{"title":"对象的本质","level":"2.3.1","depth":2,"path":"底层原理/object.md","ref":"底层原理/object.md","articles":[]},{"title":"分类及关联对象","level":"2.3.2","depth":2,"path":"底层原理/category.md","ref":"底层原理/category.md","articles":[]},{"title":"KVC&KVO","level":"2.3.3","depth":2,"path":"底层原理/kvc.md","ref":"底层原理/kvc.md","articles":[]},{"title":"消息机制","level":"2.3.4","depth":2,"path":"底层原理/message.md","ref":"底层原理/message.md","articles":[]}]},"previous":{"title":"编译流程","level":"2.1","depth":1,"path":"底层原理/compile.md","ref":"底层原理/compile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight","livereload"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cloud 632476744@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Thinking in iOS","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":""},"file":{"path":"底层原理/lauch.md","mtime":"2019-09-05T02:16:32.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-09T03:24:06.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,640 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>分类及关联对象 · Thinking in iOS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cloud 632476744@qq.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="kvc.html" />
+    
+    
+    <link rel="prev" href="object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层原理</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="compile.html">
+            
+                <a href="compile.html">
+            
+                    
+                    编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="lauch.html">
+            
+                <a href="lauch.html">
+            
+                    
+                    启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    runtime
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    对象的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.2" data-path="category.html">
+            
+                <a href="category.html">
+            
+                    
+                    分类及关联对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="kvc.html">
+            
+                <a href="kvc.html">
+            
+                    
+                    KVC&KVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    消息机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="runloop.html">
+            
+                <a href="runloop.html">
+            
+                    
+                    runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="block.html">
+            
+                <a href="block.html">
+            
+                    
+                    block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="memory.html">
+            
+                <a href="memory.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="thread.html">
+            
+                <a href="thread.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="network.html">
+            
+                <a href="network.html">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">系统架构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    hybrid
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../hybrid/webview.html">
+            
+                <a href="../hybrid/webview.html">
+            
+                    
+                    WebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    MVVM
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    组件化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">UI视图</li>
+        
+        
+    
+
+    
+        
+        <li class="header">第三方库</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    Texture
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    YYKit
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高性能</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    启动速度、体积优化、崩溃监控、卡顿监控、性能监控、电量问题
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">音视频</li>
+        
+        
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../面试题/interview.html">
+            
+                <a href="../面试题/interview.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >分类及关联对象</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="category&#x6570;&#x636E;&#x7ED3;&#x6784;">Category&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<pre class="language-"><code>struct category_t {
+    const char *name;
+    classref_t cls;
+    struct method_list_t *instanceMethods;
+    struct method_list_t *classMethods;
+    struct protocol_list_t *protocols;
+    struct property_list_t *instanceProperties;
+    // Fields below this point are not always present on disk.
+    struct property_list_t *_classProperties;
+    ...
+};
+</code></pre><p>&#x5728;objc-runtime-new.h&#x4E2D;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5206;&#x7C7B;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x4ECE;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x7684;&#x770B;&#x5230;&#x5206;&#x7C7B;&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF0C;&#x4E0D;&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#x3002;&#x5B83;&#x80FD;&#x5B58;&#x50A8;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x3001;&#x7C7B;&#x65B9;&#x6CD5;&#x3001;&#x534F;&#x8BAE;&#x548C;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x5B58;&#x50A8;ivars&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x6545;&#x5206;&#x7C7B;&#x4E2D;&#x4E0D;&#x80FD;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002;</p>
+<h2 id="category&#x7684;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;">Category&#x7684;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;</h2>
+<p>Category&#x548C;Extensiton&#x5F88;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;Extensition&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x5C31;&#x76F4;&#x63A5;&#x548C;&#x539F;&#x7C7B;&#x7F16;&#x8BD1;&#x5728;&#x4E00;&#x8D77;&#xFF0C;Category&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5230;&#x539F;&#x7C7B;&#x4E2D;&#x7684;&#x3002;</p>
+<p>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x8BFB;&#x53D6;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;(Mach-O&#x6587;&#x4EF6;),&#x4ECE;&#x91CC;&#x9762;&#x83B7;&#x53D6;dyld&#x7684;&#x8DEF;&#x5F84;&#x5E76;&#x52A0;&#x8F7D;dyld;</li>
+<li>runtime&#x5411;dyld&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;;</li>
+<li>&#x7531;dyld&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x5E93;,&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;image&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8FD9;&#x4E9B;image&#x8FDB;&#x884C;&#x94FE;&#x63A5;,&#x5E76;&#x5728;image&#x6539;&#x53D8;&#x540E;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;;</li>
+<li>runtime&#x63A5;&#x6536;dyld&#x7684;&#x51FD;&#x6570;&#x56DE;&#x8C03;&#xFF0C;&#x6267;&#x884C;map_images&#x3001;load_images&#x7B49;&#x64CD;&#x4F5C;;</li>
+<li>&#x8C03;&#x7528;main()&#x51FD;&#x6570;</li>
+</ol>
+<p>&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#xFF0C;&#x6BCF;&#x4E2A;Category&#x6587;&#x4EF6;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4E3A;category_t&#x7ED3;&#x6784;&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#x7684;map_images&#x9636;&#x6BB5;&#xFF0C;&#x4F1A;&#x904D;&#x5386;category_t&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x72EC;&#x7ACB;&#x7684;Category&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x5408;&#x5E76;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x548C;&#x5143;&#x7C7B;&#x4E2D;&#x3002;&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x904D;&#x5386;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5206;&#x7C7B;&#xFF0C;&#x53D6;&#x51FA;&#x5206;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#x3001;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x7B49;&#xFF0C;&#x5408;&#x5E76;&#x6210;addedLists&#x3002;&#x5E76;&#x4E14;&#x6700;&#x540E;&#x53C2;&#x4E0E;&#x7F16;&#x8BD1;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x6700;&#x5148;&#x52A0;&#x5165;;</li>
+<li>&#x539F;&#x5148;&#x7684;methodlists&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#x6839;&#x636E;addedLists&#x6570;&#x91CF;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x6269;&#x5BB9;;</li>
+<li>methodslists&#x4F4D;&#x7F6E;&#x5F80;&#x540E;&#x632A;&#x5230;addedListsCount&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x7531;addedLists&#x586B;&#x5145;&#xFF0C;&#x5408;&#x5E76;&#x5B8C;&#x6BD5;;</li>
+</ol>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x7B2C;3&#x6B65;&#x7684;&#x632A;&#x52A8;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x65B9;&#x6CD5;&#x67E5;&#x627E;&#x662F;&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x627E;&#x7684;&#xFF0C;&#x627E;&#x5230;&#x5373;&#x7ED3;&#x675F;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BBE;&#x8BA1;&#x8BA9;&#x5206;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x603B;&#x662F;&#x6BD4;&#x539F;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x4F18;&#x5148;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8868;&#x73B0;&#x4E3A;&#x5206;&#x7C7B;&#x4E2D;&#x7684;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#x4F1A;&#x8986;&#x76D6;&#x7C7B;&#x4E2D;&#x7684;&#x539F;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x539F;&#x65B9;&#x6CD5;&#x8FD8;&#x662F;&#x5728;methodlist&#x4E2D;&#x7684;&#x3002;</p>
+<h2 id="load&#x548C;initialize&#x65B9;&#x6CD5;">load&#x548C;initialize&#x65B9;&#x6CD5;</h2>
+<p>load&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5728;load_images&#x9636;&#x6BB5;&#xFF0C;main&#x51FD;&#x6570;&#x4E4B;&#x524D;&#x3002;load&#x65B9;&#x6CD5;&#x662F;&#x62FF;&#x5230;&#x51FD;&#x6570;&#x5730;&#x5740;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x8D70;objc_msgSend&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x50CF;&#x5206;&#x7C7B;&#x4E00;&#x6837;&#x5B58;&#x5728;&#x65B9;&#x6CD5;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&#x8C03;&#x7528;&#x7C7B;&#x7684;load&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x7236;&#x7C7B;&#x4F18;&#x5148;&#x8C03;&#x7528;&#xFF0C;&#x4E4B;&#x540E;&#x8C03;&#x7528;&#x5206;&#x7C7B;&#x7684;load&#x65B9;&#x6CD5;&#xFF0C;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x4E3A;&#x7F16;&#x8BD1;&#x65F6;&#x7684;&#x987A;&#x5E8F;&#x3002;</p>
+<p>initialize&#x5728;&#x7C7B;&#x7B2C;&#x4E00;&#x6B21;&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#x65F6;&#x8C03;&#x7528;&#x3002;&#x5728;lookup&#x51FD;&#x6570;&#x67E5;&#x627E;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4F1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x901A;&#x8FC7;objcMsgSend&#x8C03;&#x7528;initialize&#x65B9;&#x6CD5;&#x3002;&#x7531;&#x4E8E;&#x8D70;&#x7684;&#x662F;&#x6D88;&#x606F;&#x673A;&#x5236;&#xFF0C;&#x4F1A;&#x88AB;&#x5206;&#x7C7B;&#x8986;&#x76D6;&#x3002;</p>
+<h2 id="&#x5173;&#x8054;&#x5BF9;&#x8C61;">&#x5173;&#x8054;&#x5BF9;&#x8C61;</h2>
+<p>&#x524D;&#x6587;&#x8BF4;&#x8FC7;&#xFF0C;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4F1A;&#x7834;&#x574F;&#x5DF2;&#x6709;&#x7684;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x901A;&#x8FC7;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x5206;&#x7C7B;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x5728;objc-references.mm&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x7684;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<pre class="language-"><code>class AssociationsManager {
+    // associative references: object pointer -&gt; PtrPtrHashMap.
+    static AssociationsHashMap *_map;
+};
+
+class AssociationsHashMap : public unordered_map<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>disguised_ptr_t,</span> <span class="token attr-name">ObjectAssociationMap</span> <span class="token attr-name">*,</span> <span class="token attr-name">DisguisedPointerHash,</span> <span class="token attr-name">DisguisedPointerEqual,</span> <span class="token attr-name">AssociationsHashMapAllocator</span><span class="token punctuation">&gt;</span></span> {
+
+};
+
+class ObjectAssociationMap : public std::map<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void</span> <span class="token attr-name">*,</span> <span class="token attr-name">ObjcAssociation,</span> <span class="token attr-name">ObjectPointerLess,</span> <span class="token attr-name">ObjectAssociationMapAllocator</span><span class="token punctuation">&gt;</span></span> {
+
+};
+
+class ObjcAssociation {
+        uintptr_t _policy;
+        id _value;
+};
+</code></pre><p><img src="images/runtime_category_association.png" alt=""></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;objc_setAssociatedObject&#x8BBE;&#x7F6E;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x7A76;&#x7ADF;&#x53D1;&#x73B0;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<ol>
+<li>&#x6240;&#x6709;&#x7684;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x90FD;&#x88AB;&#x88AB;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;hashMap&#x4E2D;&#xFF0C;&#x7531;AssociationManager&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;hashMap&#x7684;key&#x662F;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;value&#x662F;&#x4E00;&#x4E2A;ObjectAssociationMap&#x5BF9;&#x8C61;&#xFF0C;&#x4FDD;&#x5B58;&#x4E86;&#x4E0E;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x5173;&#x8054;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li>ObjectAssociationMap&#x7684;key&#x662F;&#x5173;&#x8054;&#x65F6;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x7684;key&#xFF0C;&#x5373;&#x4F20;&#x5165;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x3002;value&#x662F;ObjcAssociation&#x5BF9;&#x8C61;&#xFF0C;&#x5B58;&#x50A8;&#x5173;&#x8054;&#x65F6;&#x6307;&#x5B9A;&#x7684;value&#x548C;policy.</li>
+</ol>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x867D;&#x7136;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6784;&#x5EFA;&#x7684;&#x6709;&#x4E9B;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x5728;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x548C;&#x5173;&#x8054;&#x5C5E;&#x6027;&#x540D;&#x4F5C;&#x4E3A;key&#xFF0C;&#x9AD8;&#x6548;&#x7684;&#x5B58;&#x50A8;&#x548C;&#x67E5;&#x627E;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="object.html" class="navigation navigation-prev " aria-label="Previous page: 对象的本质">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="kvc.html" class="navigation navigation-next " aria-label="Next page: KVC&KVO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"分类及关联对象","level":"2.3.2","depth":2,"next":{"title":"KVC&KVO","level":"2.3.3","depth":2,"path":"底层原理/kvc.md","ref":"底层原理/kvc.md","articles":[]},"previous":{"title":"对象的本质","level":"2.3.1","depth":2,"path":"底层原理/object.md","ref":"底层原理/object.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight","livereload"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cloud 632476744@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Thinking in iOS","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":""},"file":{"path":"底层原理/category.md","mtime":"2019-09-03T06:09:41.992Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-09T03:24:06.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
